@@ -5,7 +5,7 @@
 //  Created by Jake Heiser on 3/15/19.
 //
 
-import CSSH
+import libssh2
 import struct Foundation.Data
 
 enum ReadWriteProcessor {
