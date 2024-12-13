@@ -1,0 +1,6 @@
+
+module CSSH [system] {
+  header "shim.h"
+  link "ssh2"
+  export *
+}
