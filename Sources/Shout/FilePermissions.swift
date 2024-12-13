@@ -6,7 +6,7 @@
 //
 
 import Foundation
-import CSSH
+import libssh2
 
 public struct Permissions: OptionSet {
     public let rawValue: UInt

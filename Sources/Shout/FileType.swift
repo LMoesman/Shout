@@ -6,7 +6,7 @@
 //
 
 import Foundation
-import CSSH
+import libssh2
 
 public enum FileType {
     case link
