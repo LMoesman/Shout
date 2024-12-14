@@ -28,10 +28,6 @@ let package = Package(
                 "libssh2",
                 "openssl",
                 .product(name: "Socket", package: "BlueSocket")
-            ],
-            exclude: [
-                "Scripts/libssh2-generate-framework.sh",
-                "Resources/libssh2"
             ]
         ),
         .testTarget(name: "ShoutTests", dependencies: ["Shout"]),
