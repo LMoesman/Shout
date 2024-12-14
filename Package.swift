@@ -14,21 +14,20 @@ let package = Package(
         .package(url: "https://github.com/lmoesman/BlueSocket", from: "2.0.3"),
     ],
     targets: [
-        .systemLibrary(name: "CSSH", pkgConfig: "libssh2", providers: [.brew(["openssl"])]),
         .binaryTarget(
             name: "libssh2",
             path: "Libs/libssh2.xcframework"
+        ),
+        .binaryTarget(
+            name: "openssl",
+            path: "Libs/openssl.xcframework"
         ),
         .target(
             name: "Shout",
             dependencies: [
                 "libssh2",
-                "CSSH",
+                "openssl",
                 .product(name: "Socket", package: "BlueSocket")
-            ],
-            exclude: [
-                "Scripts/libssh2-generate-framework.sh",
-                "Resources/libssh2"
             ]
         ),
         .testTarget(name: "ShoutTests", dependencies: ["Shout"]),
